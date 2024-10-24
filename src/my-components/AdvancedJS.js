@@ -5,6 +5,7 @@ import Demo2 from './Demo2';  // Import Demo2
 import Demo3 from './Demo3';  // Import Demo3
 import Demo4 from './Demo4';  // Import Demo4
 import Demo5 from './Demo5';  // Import Demo5 (new file upload feature)
+import Demo6 from './Demo6';  // Import Demo6 (new demo)
 
 // Function Component
 function AdvancedJS() {    
@@ -78,6 +79,13 @@ function AdvancedJS() {
                                 >
                                     <i className="bi bi-chat-dots"></i> DEMO-5
                                 </button>
+                                <button 
+                                    className={`col-6 col-md-12 btn mb-1 ${clickedButton === 6 ? 'btn-warning' : ''}`} 
+                                    style={clickedButton === 6 ? { ...buttonStyle, backgroundColor: '#ffc107' } : buttonStyle} 
+                                    onClick={() => toggleDemo(6)}
+                                >
+                                    <i className="bi bi-code"></i> STATMENT OF AUTHENTICITY
+                                </button>
                             </div>
                         </div>
 
@@ -90,43 +98,49 @@ function AdvancedJS() {
                                             <Demo1 />  {/* Demo 1 Component */}
                                         </div>
                                     </div>
-                                </div>                   
+                                </div>                    
                                 <div className={`col-12 fade-in`} style={{ display: clickedButton === 2 ? 'block' : 'none' }}>
                                     <div className="card mb-3" style={cardStyle}>
                                         <div className="card-body">
                                             <Demo2 />  {/* Demo 2 Component */}
                                         </div>
                                     </div>
-                                </div>
+                                </div>                    
                                 <div className={`col-12 fade-in`} style={{ display: clickedButton === 3 ? 'block' : 'none' }}>
                                     <div className="card mb-3" style={cardStyle}>
                                         <div className="card-body">
                                             <Demo3 />  {/* Demo 3 Component */}
                                         </div>
                                     </div>
-                                </div>
+                                </div>                    
                                 <div className={`col-12 fade-in`} style={{ display: clickedButton === 4 ? 'block' : 'none' }}>
                                     <div className="card mb-3" style={cardStyle}>
                                         <div className="card-body">
                                             <Demo4 />  {/* Demo 4 Component */}
                                         </div>
                                     </div>
-                                </div>
+                                </div>                    
                                 <div className={`col-12 fade-in`} style={{ display: clickedButton === 5 ? 'block' : 'none' }}>
                                     <div className="card mb-3" style={cardStyle}>
                                         <div className="card-body">
-                                            <Demo5 />  {/* Demo 5: File upload */}
+                                            <Demo5 />  {/* Demo 5 Component */}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={`col-12 fade-in`} style={{ display: clickedButton === 6 ? 'block' : 'none' }}>
+                                    <div className="card mb-3" style={cardStyle}>
+                                        <div className="card-body">
+                                            <Demo6 />  {/* Demo 6 Component */}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>            
-                </div>            
-            </div>        
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
 
-// Export this component to the entire app, can be re-used or hooked into other Components
 export default AdvancedJS;
